@@ -4,7 +4,7 @@ console.log("*\n**\n***\n****\n*****");
 console.log("*****\n   * \n  *  \n *   \n*****");
 
 
-//Data:-- store(var)-->In Ram memory ,process(x+y,add,remove,delete,),display;
+//Data:-- store(var)-->In Ram memory --> process(x+y,add,remove,delete,) --> display;
 
 // Data-type:--string,number(int,float),boolean,object
 
@@ -30,7 +30,7 @@ if(x%2 ==0){
 // -------
 // -------
 // -------
-console.log("done");
+console.log(" smart Work is better then hard work ");
 
 
 
@@ -146,21 +146,26 @@ var userInput = 10;
 // Constaints :-
 // 1 <= t <= 10000(itne number de sakta hu)
 // 2 <= n <= 10^9(her number 10^9 tak bada hosakta h)
-var a = performance.now()
-// var numberT = prompt("Total number");
-var numberT = 5
-var number = Number(numberT);
 
-for(let i=0;i < number; i++){
-    // var numberN = prompt("N number");
-    var numberN = prompt("N number");
+
+var a = performance.now()
+
+// var numberT = Number(prompt("Total number"));
+var numberT = 1
+
+// 10^4 tak run krega
+for(let i=0;i < numberT; i++){
+   
+    // var num = Number(prompt("N number"));
+    var num = 1
     var  count = 0
     // var num = Math.ceil(Math.sqrt(numberN))
-    for(let div=2;div*div <= numberN;div++){
-        //ye operation joh h 10^4 * 10^9 =10^13(itni bar run krega) times hue h
-        if(numberN % div == 0){
+    // 10^9 tak run krega
+    for(let div=2;div*div <= num;div++){
+        
+        if(num % div == 0){
             count++
-            break;
+            break; 
         }
     }
     if(count ==0){
@@ -174,3 +179,90 @@ var b = performance.now();
 
 console.log((b-a)/1000);
 
+//Question 3 Print all Prime:-----
+
+// take input lowest and highest and print prime number that btw this range.
+// var low = Number(prompt('Enter the lower number'));
+var low =1
+// var high = Number(prompt('Enter the higher number'))
+var high = 1
+
+for(let i=low;i<=high;i++){
+    var count = 0;
+
+    // root n
+    for(let div=2;div*div<=i;div++){
+        if(i%div == 0){
+            count++;
+            break;
+        }
+    }
+    if(count == 0){
+        console.log(`prime number ${i}`);
+    }
+}
+
+
+// Question 4:---
+
+// febonacci Number:-----
+// --> you've to print first febonacci number and take as input 'n' the count of febonacci numbers to print and print first 'n' febonacci numbers.
+;
+// var tNum = Number(prompt('Enter total Number to be Print'));
+var tNum = 1;
+
+// initial
+
+var a = 0;
+var b = 1;
+
+var arr = []
+for(let i=0;i<tNum;i++){
+    // print a for first febonacci
+    var c = a+b;
+    arr.push(a)
+
+    a=b;
+    b=c;
+}
+console.log(arr);
+
+// Question 5:--- Count Digits of number that user give  and print
+
+// let num2 = Number(prompt('Enter num'));
+let num2 = 1000
+
+let digit = 0;
+if(num2>=1){
+    ++digit
+}
+
+while(num2/10 >=1){
+    num2 /= 10;
+    // console.log(num2);
+    digit++
+}
+
+console.log(`the Digit of the number is ${digit}`);
+
+//  Question 6:---- Print number of digit
+
+var num4 = Number(prompt('Number'));
+var tp = num4
+var nod = 0;
+var temp = num4;
+
+while(temp >=1){
+    temp = temp/10;
+    nod++
+}
+
+console.log(`${num4} digit is`);
+var div = (Math.pow(10,nod-1));
+while( div >=1){
+    var q = Math.floor(num4/div);
+    console.log(q);
+
+    num4 = num4%div;
+    div = div/10
+}
