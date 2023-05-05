@@ -1,10 +1,11 @@
 // Question 14:--- Pattern
 
-var numP = Number(prompt('Enter pattern number'));
+
+var n = Number(prompt('Enter pattern number'));
 
 var pattern = "";
 // instructor
-for(let i=1; i <= numP;i++){
+for(let i=1; i <= n;i++){
 
     // inner loop that print acc. to i value and then next line;
     for(let j=1;j<=i;j++){
@@ -20,7 +21,7 @@ console.log(pattern )
 
 let pattern2 ="";
 
-for(let i=numP;1<=i;i--){
+for(let i=n;1<=i;i--){
     // worker
     for(let j=1;j<=i;j++){
         pattern2 += '⭐\t';
@@ -32,10 +33,10 @@ console.log(pattern2)
 // Question 16 :--- pattern 3
 
 let pattern3 = ''
-let sp = numP-1;
+let sp = n-1;
 let st = 1;
 
-for(let i=1;i<= numP;i++){
+for(let i=1;i<= n;i++){
     // workers
     // acc. to sp value it run
     for(let j=1;j<=sp;j++){
@@ -56,9 +57,9 @@ console.log(pattern3);
 // Question 17:- pattern-4 reverse right align-triangle
 
 let sp1 = 0;
-let st1 = numP;
+let st1 = n;
 let pattern4 = ''
-for(let i=numP;1<=i;i--){
+for(let i=n;1<=i;i--){
     // workers
 
     for(let j=1;j<=sp1;j++){
@@ -78,9 +79,9 @@ console.log(pattern4);
 // Question 18:-- pattern 5 diamond
 
 let pattern5 = "";
-let sp2 = parseInt(numP/2 ) +1;
+let sp2 = parseInt(n/2 ) +1;
 let st2 = 1;
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
 
     for(let j=1;j<=sp2;j++){
         pattern5 += `\t`
@@ -90,7 +91,7 @@ for(let i=1;i<=numP;i++){
     }
     
     // console.log(sp2,st2);
-    if(i <= parseInt(numP/2)){
+    if(i <= parseInt(n/2)){
         sp2--;
         st2 +=2;
     }else{
@@ -105,8 +106,8 @@ console.log(pattern5);
 
 let pattern6 = "";
 let sp3 = 1;
-let st3 = parseInt(numP/2) + 1;
-for(let i=1;i<=numP;i++){
+let st3 = parseInt(n/2) + 1;
+for(let i=1;i<=n;i++){
     // worker
     for(let k=1;k<=st3;k++){
         pattern6 += '⭐\t'
@@ -118,7 +119,7 @@ for(let i=1;i<=numP;i++){
         pattern6 += '⭐\t'
     }
 // console.log(st3,sp3,st3);
-    if(i <= parseInt(numP/2)){
+    if(i <= parseInt(n/2)){
         st3--;
         sp3 += 2
     }else{
@@ -133,8 +134,8 @@ console.log(pattern6);
 
 let pattern7 = "";
 
-for(let i=1;i<=numP;i++){
-    for(let j=1;j<=numP;j++){
+for(let i=1;i<=n;i++){
+    for(let j=1;j<=n;j++){
         if(i===j){
             pattern7 +="🌟\t";
         }
@@ -149,9 +150,9 @@ console.log(pattern7);
 
 let pattern8 = "";
 
-for(let i=numP ;1<=i;i--){
+for(let i=n ;1<=i;i--){
     // worker
-    for(let j=numP;1<=j;j--){
+    for(let j=n;1<=j;j--){
         if( j==i){
             pattern8 += '💣\t'
         }
@@ -161,9 +162,9 @@ for(let i=numP ;1<=i;i--){
     pattern8 += "\n"
 }
 
-for(let i = 1;i<=numP;i++){
-    for(let j=1;j<=numP;j++){
-        if(i+j == numP+1){
+for(let i = 1;i<=n;i++){
+    for(let j=1;j<=n;j++){
+        if(i+j == n+1){
 
             pattern8 +="🔥\t"
         }
@@ -178,9 +179,9 @@ console.log(pattern8);
 
 let pattern9 = "";
 
-for(let i=1;i<=numP;i++){
-    for(let j=1;j<=numP;j++){
-        if( i===j || i+j === numP +1){
+for(let i=1;i<=n;i++){
+    for(let j=1;j<=n;j++){
+        if( i===j || i+j === n +1){
             
             pattern9 += '⭐ \t'
         }else{
@@ -198,11 +199,11 @@ console.log(pattern9);
 let pattern10 = "";
 
 // outer space
-let os = parseInt(numP/2);
+let os = parseInt(n/2);
 // inner space
 let is = -1;
 
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
 // console.log(os,is);
 
 for(let j=1;j<=os;j++){
@@ -216,11 +217,11 @@ for(let k=1;k<=is;k++){
 }
 
 // first and last row m 1 star ayega
-if(i>1 && i <numP ){
+if(i>1 && i <n ){
     pattern10 += 'c\t';
 
 }
-    if(i <= parseInt(numP/2)){
+    if(i <= parseInt(n/2)){
         os--;
         is += 2;
     }else{
@@ -238,7 +239,7 @@ console.log(pattern10);
 let pattern11 = "";
 
 let value = 1;
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
     // i ke hisaab se print krta h.
     for(let j=1;j<=i;j++){
         pattern11 += value +"\t"
@@ -255,7 +256,7 @@ let pattern12 = "";
 let a =0;
 let b =1;
 
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
     for(let j=1;j<=i;j++){
         pattern12 += `${a}\t`
         let c = a+b;
@@ -272,7 +273,7 @@ console.log(pattern12);
 
 let pattern13 = "";
 var arr = []
-for(let i=0;i<=numP;i++){
+for(let i=0;i<=n;i++){
     let iCj = 1
     var arr1 = []
     for(let j=0;j<=i;j++){
@@ -293,8 +294,8 @@ console.log(pattern13);
 
 let pattern14 = '';
 for(let i=1;i<=10;i++){
-    let val = numP * i;
-    pattern14 += `${numP} * ${i} = ${val}`
+    let val = n * i;
+    pattern14 += `${n} * ${i} = ${val}`
     pattern14 += "\n"
 }
 console.log('multiplication table :---');
@@ -303,9 +304,9 @@ console.log(pattern14);
 // Question 28 pattern :diamnond -number pattern
 
 let pattern15 = "";
-let sp4 =parseInt(numP/2);
+let sp4 =parseInt(n/2);
 let st4 = 1;
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
     // worker:--
     for(let j=1;j<=sp4;j++){
         pattern15 +='\t'
@@ -315,7 +316,7 @@ for(let i=1;i<=numP;i++){
         pattern15 += '⭐\t'
     }
 
-    if(i <= parseInt(numP/2)){
+    if(i <= parseInt(n/2)){
         sp4--;
         st4+=2;
 
@@ -331,10 +332,10 @@ console.log(pattern15);
 
 let pattern16 = "";
 // total space
-let sp5 = 2*numP-3;
+let sp5 = 2*n-3;
 // star
 let st5 = 1
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
     let val =1;
     // for star(left)
     for(let j=1;j<=st5;j++){
@@ -347,7 +348,7 @@ for(let i=1;i<=numP;i++){
         pattern16 +=`\t`
     }
     // retduce st5 -1
-    if(i === numP){
+    if(i === n){
         st5--
         val--
     }
@@ -368,14 +369,14 @@ console.log(pattern16);
 // Question 30 :--- arrow pattern
  
 let pattern17=""
-let sp6 = parseInt(numP/2);
+let sp6 = parseInt(n/2);
 let st6=1;
 // middle m star and left side ma star print hongeP
 
-for(let i=1;i<=numP;i++){
+for(let i=1;i<=n;i++){
     // space
     for(let j=1;j<=sp6;j++){ 
-        if(i === Math.floor(numP/2)+1){
+        if(i === Math.floor(n/2)+1){
             pattern17 +='*\t'
         }else{
 
@@ -388,7 +389,7 @@ for(let i=1;i<=numP;i++){
         pattern17 += '*\t'
     }
     // star print st++,st--
-    if(i <= parseInt(numP/2)){
+    if(i <= parseInt(n/2)){
         st6++
     }else{
         st6--
@@ -400,40 +401,99 @@ console.log(pattern17);
 
 // Question 31:-- 2 pyramid looking to each other one of them is hollow;
 
- let pattern18 = "";
- let st7 = numP;
+let pattern18 = "";
+let st7 = n;
  let sp7 = 0;
 
- for(let i=1;i<=numP;i++){
-
-    // sp7
+ for(let i=1;i<=n;i++){
+    // Space:-----
     for(let j=1;j<=sp7;j++){
-        pattern18 +="\t"
+        pattern18+="\t"
     }
-
+    // star:---
     for(let k=1;k<=st7;k++){
-        // first row ke baad joh star h unko hatane ke liye
-        if(i>1 && i<=parseInt(numP/2) && k>1 && k<st7){
+        if(i >1 && i<=parseInt(n/2) && k>1 && k< st7){
 
-            pattern18+= "\t"
+            pattern18+='\t'
         }else{
 
-            pattern18+= "*\t"
+            pattern18+='*\t'
         }
-    }
 
-    // sp -+by1 and st-+2
-    if(i<=parseInt(numP/2)){
+        
+    }
+    // space(-+1) and star(-+2)
+
+    if(i <= parseInt(n/2)){
         sp7++;
-        st7-=2
+        st7 -=2
     }else{
         sp7--;
         st7+=2
     }
     pattern18+='\n'
  }
-
- console.log(pattern18);
-
-
  
+ console.log(pattern18);
+ 
+ // Question 32 :-- (swasitk)
+
+ let pattern19 = "";
+ 
+ for(let i=1;i<=n;i++){
+    for(let j=1;j<=n;j++){
+        if(i ==1){
+            if(j==n || j<=parseInt(n/2) +1){
+                pattern19+=" ⬛️\t"
+            }else{
+                pattern19+="\t"
+
+            }
+        }else if(i <=parseInt(n/2)){
+            if(j==n || j==parseInt(n/2)+1 ){
+                pattern19+=" ⬛️\t"
+            }else{
+                pattern19+="\t"
+            }
+        }else if(i === parseInt(n/2)+1){
+             pattern19+=" ⬛️\t"
+        }else if(i<n){
+            if(j==1 || j== parseInt(n/2)+1){
+                pattern19+=" ⬛️\t"
+            }else{
+                pattern19+="\t"
+            }
+        }else{
+            if(j==1 || j>= parseInt(n/2)+1){
+                pattern19+=" ⬛️\t"
+            }else{
+                pattern19+="\t"
+            }
+        }
+        
+    }
+    pattern19 += "\n"
+
+ }
+
+ console.log("%c%s","background:white;border:5px solid red",pattern19);
+ 
+//  Question 33:-- pattern W
+
+let pattern20 = "";
+
+for(let i=1;i<=n;i++){
+for(let j=1;j<=n;j++){
+    if( j===1 || j===n){
+        pattern20+="*\t"
+    }else if(i > parseInt(n/2) && (i===j || i+j === n+1)){
+        pattern20+="*\t"
+    }else{
+
+        pattern20+='\t'
+    }
+}
+pattern20+="\n"
+}
+
+console.log(pattern20);
