@@ -32,19 +32,14 @@ let val = Number(prompt('enter val'));
 
 function digitFreq(n,d){
 
-    let count = 0;
-
-    while(n > 0){
-
-        let dig = n % 10
-
-        n=parseInt(n /  10)
+    let count =0;
+    while(n>0){
+        let dig = n%10;
+        n = parseInt(n/10);
 
         if(dig === d){
             count++
-
         }
-
     }
 
     return count
